@@ -455,4 +455,4 @@ async def checkTime(ctx):
     msg = await client.wait_for("message", check=check)
     await ctx.send(f"Hello {msg.author}!")'''
 
-client.run('ODg4MDg1NzczNTU4MTE2MzYz.YUNkVA.QQl1DhZhFpkLkc9gZijvLMcnTKQ')
+

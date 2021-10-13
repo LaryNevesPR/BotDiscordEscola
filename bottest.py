@@ -178,4 +178,3 @@ async def Criar_Conta_Aluno(autor):
 
 
 
-client.run('ODk3NTU5MDA0NzgyMzk5NTE5.YWXa9g.fkAbeN7ZKGBGthS128FfLxnhrqk')
