@@ -1,0 +1,174 @@
+{
+  "817212798630101042": {
+    "id": 817212798630101042,
+    "nome": "UmaPessoaFeliz",
+    "ocupação": "Aluno",
+    "dinheiro": 0,
+    "reputação": 999,
+    "estaempregado": false,
+    "notas": {
+      "português": 0,
+      "matemática": 0,
+      "biologia": 0,
+      "história": 0,
+      "física": 0,
+      "química": 0,
+      "geografia": 0,
+      "edfisica": 0
+    },
+    "inventario": {}
+  },
+  "325045685672214539": {
+    "id": 325045685672214539,
+    "nome": "rast",
+    "ocupação": "Aluno",
+    "dinheiro": 137,
+    "reputação": 50,
+    "estaempregado": false,
+    "notas": {
+      "português": 0,
+      "matemática": 0,
+      "biologia": 0,
+      "história": 0,
+      "física": 0,
+      "química": 0,
+      "geografia": 0,
+      "edfisica": 0
+    },
+    "inventario": {}
+  },
+  "491808688273883136": {
+    "id": 491808688273883136,
+    "nome": "Lírio",
+    "ocupação": "Aluno",
+    "dinheiro": 0,
+    "reputação": 50,
+    "estaempregado": false,
+    "notas": {
+      "português": 0,
+      "matemática": 0,
+      "biologia": 0,
+      "história": 0,
+      "física": 0,
+      "química": 0,
+      "geografia": 0,
+      "edfisica": 0
+    },
+    "inventario": {}
+  },
+  "463000964199219221": {
+    "id": 463000964199219221,
+    "nome": "Og_jr",
+    "ocupação": "Aluno",
+    "dinheiro": 286,
+    "reputação": 50,
+    "estaempregado": false,
+    "notas": {
+      "português": 0,
+      "matemática": 0,
+      "biologia": 0,
+      "história": 0,
+      "física": 0,
+      "química": 0,
+      "geografia": 0,
+      "edfisica": 0
+    },
+    "inventario": {}
+  },
+  "860169366635806741": {
+    "id": 860169366635806741,
+    "nome": "Rag_chan",
+    "ocupação": "Aluno",
+    "dinheiro": 359,
+    "reputação": 50,
+    "estaempregado": true,
+    "emprego": {
+      "nomeemprego": "Limpeza do campus",
+      "dinheiromin": "10",
+      "dinheiromax": "20"
+    },
+    "notas": {
+      "português": 0,
+      "matemática": 0,
+      "biologia": 0,
+      "história": 0,
+      "física": 0,
+      "química": 0,
+      "geografia": 0,
+      "edfisica": 0
+    },
+    "inventario": [
+      {
+        "item": "caderno",
+        "quantidade": 1
+      },
+      {
+        "item": "mochila estilosa",
+        "quantidade": 1
+      }
+    ]
+  },
+  "619230710846455808": {
+    "id": 619230710846455808,
+    "nome": "Capivara Mistica",
+    "ocupação": "Aluno",
+    "dinheiro": 282,
+    "reputação": 50,
+    "estaempregado": true,
+    "emprego": {
+      "nomeemprego": "Limpeza do campus",
+      "dinheiromin": "10",
+      "dinheiromax": "20"
+    },
+    "notas": {
+      "português": 0,
+      "matemática": 0,
+      "biologia": 0,
+      "história": 0,
+      "física": 0,
+      "química": 0,
+      "geografia": 0,
+      "edfisica": 0
+    },
+    "inventario": {}
+  },
+  "536748084906950668": {
+    "id": 536748084906950668,
+    "nome": "Forte",
+    "ocupação": "Aluno",
+    "dinheiro": 0,
+    "reputação": 50,
+    "estaempregado": false,
+    "emprego": {},
+    "notas": {
+      "português": 0,
+      "matemática": 0,
+      "biologia": 0,
+      "história": 0,
+      "física": 0,
+      "química": 0,
+      "geografia": 0,
+      "edfisica": 0
+    },
+    "inventario": {}
+  },
+  "238459676876996619": {
+    "id": 238459676876996619,
+    "nome": "Larry a Lagosta",
+    "ocupação": "Professor",
+    "dinheiro": 567,
+    "reputação": 50,
+    "estaempregado": true,
+    "emprego": {
+      "nomeemprego": "Professor de Hístoria",
+      "dinheiromin": "100",
+      "dinheiromax": "300"
+    },
+    "inventario": [
+      {
+        "item": "caderno",
+        "quantidade": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "limpeza do campus": {
+    "nomeemprego": "Limpeza do campus",
+    "dinheiromin": "19",
+    "dinheiromax": "21"
+  },
+  "trabalhar na cantina": {
+    "nomeemprego": "Trabalhar na cantina",
+    "dinheiromin": "4",
+    "dinheiromax": "21"
+  },
+  "ajudante de professor": {
+    "nomeemprego": "Ajudante de professor",
+    "dinheiromin": "4",
+    "dinheiromax": "26"
+  }
+}
