@@ -11,7 +11,7 @@ from datetime import datetime
 from discord.ext.commands.cooldowns import BucketType
 import datetime as dt
 
-os.chdir("home\user_238459676876996619")
+os.chdir("\home\user_238459676876996619")
 
 client = commands.Bot(command_prefix="!!",  case_insensitive=True)
 
