@@ -6,6 +6,11 @@
     "dinheiro": 0,
     "reputação": 999,
     "estaempregado": false,
+    "emprego":{
+      "nomeemprego": "Sem emprego",
+      "dinheiromin": "0",
+      "dinheiromax": "0"
+    },
     "notas": {
       "português": 0,
       "matemática": 0,
@@ -25,6 +30,11 @@
     "dinheiro": 137,
     "reputação": 50,
     "estaempregado": false,
+    "emprego":{
+      "nomeemprego": "Sem emprego",
+      "dinheiromin": "0",
+      "dinheiromax": "0"
+    },
     "notas": {
       "português": 0,
       "matemática": 0,
@@ -44,6 +54,11 @@
     "dinheiro": 0,
     "reputação": 50,
     "estaempregado": false,
+    "emprego":{
+      "nomeemprego": "Sem emprego",
+      "dinheiromin": "0",
+      "dinheiromax": "0"
+    },
     "notas": {
       "português": 0,
       "matemática": 0,
@@ -63,6 +78,11 @@
     "dinheiro": 286,
     "reputação": 50,
     "estaempregado": false,
+    "emprego":{
+      "nomeemprego": "Sem emprego",
+      "dinheiromin": "0",
+      "dinheiromax": "0"
+    },
     "notas": {
       "português": 0,
       "matemática": 0,
@@ -139,7 +159,11 @@
     "dinheiro": 0,
     "reputação": 50,
     "estaempregado": false,
-    "emprego": {},
+    "emprego":{
+      "nomeemprego": "Sem emprego",
+      "dinheiromin": "0",
+      "dinheiromax": "0"
+    },
     "notas": {
       "português": 0,
       "matemática": 0,
@@ -156,18 +180,18 @@
     "id": 238459676876996619,
     "nome": "Larry a Lagosta",
     "ocupação": "Professor",
-    "dinheiro": 567,
+    "dinheiro": 772,
     "reputação": 50,
     "estaempregado": true,
     "emprego": {
-      "nomeemprego": "Professor de Hístoria",
+      "nomeemprego": "Professor de Português",
       "dinheiromin": "100",
       "dinheiromax": "300"
     },
     "inventario": [
       {
         "item": "caderno",
-        "quantidade": 1
+        "quantidade": 2
       }
     ]
   }

@@ -2,21 +2,32 @@ import discord
 import json
 import os
 import random
+import asyncio
 
 from discord.errors import NoMoreItems
 from JasonManager import Guardar_Users, Ler_Empregos
-from discord.ext import commands
+from discord.ext import commands, tasks
 from datetime import datetime
 from discord.ext.commands.cooldowns import BucketType
+import datetime as dt
 
-os.chdir("D:\Py\BotSharp\BotAlt")
+os.chdir("home\user_238459676876996619")
 
 client = commands.Bot(command_prefix="!!",  case_insensitive=True)
 
+"""for filename in os.listdir('./cogs'):
+    if filename.endswith('.py'):
+        client.load_extension(f'cogs.{filename[:-3]}')"""
+
 @client.event
 async def on_ready():
-    #await Verificar_Users()
+    Aula_Portugues.start()
     print('Opa! To On!')
+#-------------------------------------------------------------------------------------
+#--------------------------------Aulas------------------------------------------------
+#-------------------------------------------------------------------------------------
+
+aulaAtual= {"nome": "Nenhuma", "professor": "00000000", "motivo": "Aula normal"}
 
 #-------------------------------------------------------------------------------------
 #--------------------------------ITENS------------------------------------------------
@@ -198,7 +209,11 @@ async def SairEmprego(ctx):
     if str(ctx.author.id) in Users:
         if Users[str(ctx.author.id)]["estaempregado"] == True:
             Users[str(ctx.author.id)]["estaempregado"] = False
-            Users[str(ctx.author.id)]["emprego"] = {}
+            Users[str(ctx.author.id)]["emprego"] = {
+                "nomeemprego": "Sem emprego",
+                "dinheiromin": "0",
+                "dinheiromax": "0"
+            }
             Guardar_Users(Users)
             await ctx.send(f"Você deixou o emprego!")
         else:
@@ -371,7 +386,11 @@ async def Criar_Conta_Professor(autor):
             "dinheiro": 0,
             "reputação": 0,
             "estaempregado": True,
-            "emprego":{},
+            "emprego":{
+                "nomeemprego": "Sem emprego",
+                "dinheiromin": "0",
+                "dinheiromax": "0"
+            },
             "inventario": {}
             }
         Guardar_Users(Users)
@@ -390,7 +409,11 @@ async def Criar_Conta_Aluno(autor):
             "dinheiro": 0,
             "reputação": 50,
             "estaempregado": False,
-            "emprego":{},
+            "emprego":{
+                "nomeemprego": "Sem emprego",
+                "dinheiromin": "0",
+                "dinheiromax": "0"
+            },
             "notas": {
                 "português": 0,
                 "matemática": 0,
@@ -433,8 +456,54 @@ async def on_command_error(ctx, error):
 #-------------------------------------------------------------------------------------
 #--------------------------------COISAS-----------------------------------------------
 #-------------------------------------------------------------------------------------
+@tasks.loop(hours=168)
+async def Aula_Portugues():
+    message_channel = client.get_channel(898308678187364352)
+    await message_channel.send("A aula de portguês está començando")
+    prof = await Get_professor("Professor de Português")
+    aulaAtual["nome"] = "Português"
+    aulaAtual["professor"] = prof
+    aulaAtual["motivo"] = "Aula normal"
+    if prof != False:
+        profid = "<@!"+ str(prof) +">"
+        await message_channel.send(f"Professor {profid}, já vai chegar")
+    else:
+        await message_channel.send(f"Professor ausente, aula livre!!")
+    await asyncio.sleep(60)
 
-'''@client.command()
+
+    await message_channel.send("A aula acabou")
+
+@Aula_Portugues.before_loop
+async def before_Aula_Portugues():
+    # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
+    for _ in range(60*60*24*7):  
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "23:00 UTC Fri":
+            print('It is time')
+            return
+
+        # wait some time before another loop. Don't make it more than 60 sec or it will skip
+        await asyncio.sleep(10)
+
+
+async def Get_professor(materia):
+    Users = await Ler_Users()
+    id_ = None
+    for prof in Users:
+        print(Users[prof]["emprego"]["nomeemprego"])
+        if Users[prof]["emprego"]["nomeemprego"] == str(materia):
+            id_ = Users[prof]["id"]
+            print(id_)
+            return id_
+    
+    if id_ == None:
+        print("Nada")
+        return False
+
+
+
+
+@client.command()
 async def checkTime(ctx):
     # This function runs periodically every 1 second
 
@@ -446,7 +515,7 @@ async def checkTime(ctx):
     if(current_time >= '21:10:00'):  # check if matches with the desired time
         await ctx.send('sending message')
     else:
-        await ctx.send('não está na hora')'''
+        await ctx.send('não está na hora')
 
 '''def check(m):
         return m.content == "hello" and m.channel == ctx.channel
@@ -455,4 +524,4 @@ async def checkTime(ctx):
     msg = await client.wait_for("message", check=check)
     await ctx.send(f"Hello {msg.author}!")'''
 
-
+client.run('ODg4MDg1NzczNTU4MTE2MzYz.YUNkVA.SQkLn6homzrsyBW_qiTbehK-QbU')
