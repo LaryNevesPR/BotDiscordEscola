@@ -478,7 +478,7 @@ async def Aula_Portugues():
 async def before_Aula_Portugues():
     # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
     for _ in range(60*60*24*7):  
-        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "01:35 UTC Fri":
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "01:37 UTC Sat":
             print('It is time')
             return
 
