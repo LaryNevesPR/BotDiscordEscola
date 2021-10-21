@@ -11,7 +11,7 @@ from datetime import datetime
 from discord.ext.commands.cooldowns import BucketType
 import datetime as dt
 
-os.chdir("D:\Py\Git\BotDiscordEscola")
+#os.chdir("home\user_238459676876996619")
 
 client = commands.Bot(command_prefix="!!",  case_insensitive=True)
 for filename in os.listdir('./cogs'):
@@ -730,4 +730,4 @@ async def checkTime(ctx):
     msg = await client.wait_for("message", check=check)
     await ctx.send(f"Hello {msg.author}!")'''
 
-client.run('ODk3NTU5MDA0NzgyMzk5NTE5.YWXa9g.9IhJog5aEfOGB9UrTo4BoYZK1Jo')
+client.run('ODg4MDg1NzczNTU4MTE2MzYz.YUNkVA.SQkLn6homzrsyBW_qiTbehK-QbU')
