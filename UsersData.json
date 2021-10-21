@@ -2,26 +2,21 @@
   "817212798630101042": {
     "id": 817212798630101042,
     "nome": "UmaPessoaFeliz",
-    "ocupação": "Aluno",
+    "ocupação": "Professor",
     "dinheiro": 0,
     "reputação": 999,
-    "estaempregado": false,
-    "emprego":{
-      "nomeemprego": "Sem emprego",
-      "dinheiromin": "0",
-      "dinheiromax": "0"
+    "estaempregado": true,
+    "emprego": {
+      "nomeemprego": "Professor de Biologia",
+      "dinheiromin": "100",
+      "dinheiromax": "500"
     },
-    "notas": {
-      "português": 0,
-      "matemática": 0,
-      "biologia": 0,
-      "história": 0,
-      "física": 0,
-      "química": 0,
-      "geografia": 0,
-      "edfisica": 0
-    },
-    "inventario": {}
+    "inventario": [
+      {
+        "item": "caderno",
+        "quantidade": 2
+      }
+    ]
   },
   "325045685672214539": {
     "id": 325045685672214539,
@@ -30,7 +25,7 @@
     "dinheiro": 137,
     "reputação": 50,
     "estaempregado": false,
-    "emprego":{
+    "emprego": {
       "nomeemprego": "Sem emprego",
       "dinheiromin": "0",
       "dinheiromax": "0"
@@ -54,7 +49,7 @@
     "dinheiro": 0,
     "reputação": 50,
     "estaempregado": false,
-    "emprego":{
+    "emprego": {
       "nomeemprego": "Sem emprego",
       "dinheiromin": "0",
       "dinheiromax": "0"
@@ -78,7 +73,7 @@
     "dinheiro": 286,
     "reputação": 50,
     "estaempregado": false,
-    "emprego":{
+    "emprego": {
       "nomeemprego": "Sem emprego",
       "dinheiromin": "0",
       "dinheiromax": "0"
@@ -159,7 +154,7 @@
     "dinheiro": 0,
     "reputação": 50,
     "estaempregado": false,
-    "emprego":{
+    "emprego": {
       "nomeemprego": "Sem emprego",
       "dinheiromin": "0",
       "dinheiromax": "0"
@@ -194,5 +189,29 @@
         "quantidade": 2
       }
     ]
+  },
+  "443183208725741578": {
+    "id": 443183208725741578,
+    "nome": "Big_X \" Vulgo Klaus \"",
+    "ocupação": "Aluno",
+    "dinheiro": 0,
+    "reputação": 50,
+    "estaempregado": false,
+    "emprego": {
+      "nomeemprego": "Sem emprego",
+      "dinheiromin": "0",
+      "dinheiromax": "0"
+    },
+    "notas": {
+      "português": 0,
+      "matemática": 0,
+      "biologia": 0,
+      "história": 0,
+      "física": 0,
+      "química": 0,
+      "geografia": 0,
+      "edfisica": 0
+    },
+    "inventario": {}
   }
 }
