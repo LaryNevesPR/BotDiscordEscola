@@ -14,14 +14,20 @@ import datetime as dt
 os.chdir("D:\Py\Git\BotDiscordEscola")
 
 client = commands.Bot(command_prefix="!!",  case_insensitive=True)
-
-"""for filename in os.listdir('./cogs'):
+for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
-        client.load_extension(f'cogs.{filename[:-3]}')"""
+        client.load_extension(f'cogs.{filename[:-3]}')
+
 
 @client.event
 async def on_ready():
+    
     Aula_Portugues.start()
+    Aula_Matematica.start()
+    Aula_Historia.start()
+    Aula_Fisica.start()
+    Aula_Quimica.start()
+    Aula_Geografia.start()
     print('Opa! To On!')
 #-------------------------------------------------------------------------------------
 #--------------------------------Aulas------------------------------------------------
@@ -348,6 +354,8 @@ async def buy_this(user, item_name, quantidade):
     Guardar_Users(Users)
 
     return[True, "Worked"]
+
+
 #-------------------------------------------------------------------------------------
 #--------------------------------DEFS-------------------------------------------------
 #-------------------------------------------------------------------------------------
@@ -454,11 +462,16 @@ async def on_command_error(ctx, error):
 
 
 #-------------------------------------------------------------------------------------
-#--------------------------------COISAS-----------------------------------------------
+#--------------------------------Aulas-----------------------------------------------
+#-------------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------------
+#--------------------------------Portugues-----------------------------------------------
 #-------------------------------------------------------------------------------------
 @tasks.loop(hours=168)
 async def Aula_Portugues():
-    message_channel = client.get_channel(898308678187364352)
+    message_channel = client.get_channel(898414589417521192)
+    await message_channel.purge(limit=1000000)
     await message_channel.send("A aula de portguês está començando")
     prof = await Get_professor("Professor de Português")
     aulaAtual["nome"] = "Português"
@@ -469,7 +482,7 @@ async def Aula_Portugues():
         await message_channel.send(f"Professor {profid}, já vai chegar")
     else:
         await message_channel.send(f"Professor ausente, aula livre!!")
-    await asyncio.sleep(60)
+    await asyncio.sleep(3590)
 
 
     await message_channel.send("A aula acabou")
@@ -478,13 +491,206 @@ async def Aula_Portugues():
 async def before_Aula_Portugues():
     # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
     for _ in range(60*60*24*7):  
-        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "20:50 UTC Fri":
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "00:00 UTC Wed":
+            print('It is time')
+            return
+
+        # wait some time before another loop. Don't make it more than 60 sec or it will skip
+        await asyncio.sleep(10)
+#-------------------------------------------------------------------------------------
+#--------------------------------Matemática-----------------------------------------------
+#-------------------------------------------------------------------------------------
+@tasks.loop(hours=168)
+async def Aula_Matematica():
+    message_channel = client.get_channel(556910930911297537)
+    await message_channel.purge(limit=1000000)
+    await message_channel.send("A aula de matemática está començando")
+    prof = await Get_professor("Professor de Matemática")
+    aulaAtual["nome"] = "Matemática"
+    aulaAtual["professor"] = prof
+    aulaAtual["motivo"] = "Aula normal"
+    if prof != False:
+        profid = "<@!"+ str(prof) +">"
+        await message_channel.send(f"Professor {profid}, já vai chegar")
+    else:
+        await message_channel.send(f"Professor ausente, aula livre!!")
+    await asyncio.sleep(3590)
+
+
+    await message_channel.send("A aula acabou")
+
+@Aula_Matematica.before_loop
+async def before_Aula_Matematica():
+    # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
+    for _ in range(60*60*24*7):  
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "00:00 UTC Tue":
             print('It is time')
             return
 
         # wait some time before another loop. Don't make it more than 60 sec or it will skip
         await asyncio.sleep(10)
 
+#-------------------------------------------------------------------------------------
+#--------------------------------Historia-----------------------------------------------
+#-------------------------------------------------------------------------------------
+@tasks.loop(hours=168)
+async def Aula_Historia():
+    message_channel = client.get_channel(556910930911297537)
+    await message_channel.purge(limit=1000000)
+    await message_channel.send("A aula de história está començando")
+    prof = await Get_professor("Professor de História")
+    aulaAtual["nome"] = "História"
+    aulaAtual["professor"] = prof
+    aulaAtual["motivo"] = "Aula normal"
+    if prof != False:
+        profid = "<@!"+ str(prof) +">"
+        await message_channel.send(f"Professor {profid}, já vai chegar")
+    else:
+        await message_channel.send(f"Professor ausente, aula livre!!")
+    await asyncio.sleep(3590)
+
+
+    await message_channel.send("A aula acabou")
+
+@Aula_Historia.before_loop
+async def before_Aula_Historia():
+    # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
+    for _ in range(60*60*24*7):  
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "00:00 UTC Thu":
+            print('It is time')
+            return
+
+        # wait some time before another loop. Don't make it more than 60 sec or it will skip
+        await asyncio.sleep(10)
+
+#-------------------------------------------------------------------------------------
+#--------------------------------Biologia-----------------------------------------------
+#-------------------------------------------------------------------------------------
+@tasks.loop(hours=168)
+async def Aula_Biologia():
+    message_channel = client.get_channel(556910930911297537)
+    await message_channel.purge(limit=1000000)
+    await message_channel.send("A aula de biologia está començando")
+    prof = await Get_professor("Professor de Biologia")
+    aulaAtual["nome"] = "Biologia"
+    aulaAtual["professor"] = prof
+    aulaAtual["motivo"] = "Aula normal"
+    if prof != False:
+        profid = "<@!"+ str(prof) +">"
+        await message_channel.send(f"Professor {profid}, já vai chegar")
+    else:
+        await message_channel.send(f"Professor ausente, aula livre!!")
+    await asyncio.sleep(3590)
+
+
+    await message_channel.send("A aula acabou")
+
+@Aula_Biologia.before_loop
+async def before_Aula_Biologia():
+    # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
+    for _ in range(60*60*24*7):  
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "00:00 UTC Mon":
+            print('It is time')
+            return
+
+        # wait some time before another loop. Don't make it more than 60 sec or it will skip
+        await asyncio.sleep(10)
+#-------------------------------------------------------------------------------------
+#--------------------------------Física-----------------------------------------------
+#-------------------------------------------------------------------------------------
+@tasks.loop(hours=168)
+async def Aula_Fisica():
+    message_channel = client.get_channel(556910930911297537)
+    await message_channel.purge(limit=1000000)
+    await message_channel.send("A aula de física está començando")
+    prof = await Get_professor("Professor de Física")
+    aulaAtual["nome"] = "Física"
+    aulaAtual["professor"] = prof
+    aulaAtual["motivo"] = "Aula normal"
+    if prof != False:
+        profid = "<@!"+ str(prof) +">"
+        await message_channel.send(f"Professor {profid}, já vai chegar")
+    else:
+        await message_channel.send(f"Professor ausente, aula livre!!")
+    await asyncio.sleep(3590)
+
+
+    await message_channel.send("A aula acabou")
+
+@Aula_Fisica.before_loop
+async def before_Aula_Fisica():
+    # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
+    for _ in range(60*60*24*7):  
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "00:00 UTC Fri":
+            print('It is time')
+            return
+
+        # wait some time before another loop. Don't make it more than 60 sec or it will skip
+        await asyncio.sleep(10)
+#-------------------------------------------------------------------------------------
+#--------------------------------Química-----------------------------------------------
+#-------------------------------------------------------------------------------------
+@tasks.loop(hours=168)
+async def Aula_Quimica():
+    message_channel = client.get_channel(556910930911297537)
+    await message_channel.purge(limit=1000000)
+    await message_channel.send("A aula de química está començando")
+    prof = await Get_professor("Professor de Química")
+    aulaAtual["nome"] = "Química"
+    aulaAtual["professor"] = prof
+    aulaAtual["motivo"] = "Aula normal"
+    if prof != False:
+        profid = "<@!"+ str(prof) +">"
+        await message_channel.send(f"Professor {profid}, já vai chegar")
+    else:
+        await message_channel.send(f"Professor ausente, aula livre!!")
+    await asyncio.sleep(3590)
+
+
+    await message_channel.send("A aula acabou")
+
+@Aula_Quimica.before_loop
+async def before_Aula_Quimica():
+    # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
+    for _ in range(60*60*24*7):  
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "01:00 UTC Fri":
+            print('It is time')
+            return
+
+        # wait some time before another loop. Don't make it more than 60 sec or it will skip
+        await asyncio.sleep(10)
+#-------------------------------------------------------------------------------------
+#--------------------------------geografia-----------------------------------------------
+#-------------------------------------------------------------------------------------
+@tasks.loop(hours=168)
+async def Aula_Geografia():
+    message_channel = client.get_channel(556910930911297537)
+    await message_channel.purge(limit=1000000)
+    await message_channel.send("A aula de geografia está començando")
+    prof = await Get_professor("Professor de Geografia")
+    aulaAtual["nome"] = "Geografia"
+    aulaAtual["professor"] = prof
+    aulaAtual["motivo"] = "Aula normal"
+    if prof != False:
+        profid = "<@!"+ str(prof) +">"
+        await message_channel.send(f"Professor {profid}, já vai chegar")
+    else:
+        await message_channel.send(f"Professor ausente, aula livre!!")
+    await asyncio.sleep(3590)
+
+
+    await message_channel.send("A aula acabou")
+
+@Aula_Geografia.before_loop
+async def before_Aula_Geografia():
+    # loop the whole 7 day (60 sec 60 min 24 hours 7 days)
+    for _ in range(60*60*24*7):  
+        if dt.datetime.utcnow().strftime("%H:%M UTC %a") == "01:00 UTC Wed":
+            print('It is time')
+            return
+
+        # wait some time before another loop. Don't make it more than 60 sec or it will skip
+        await asyncio.sleep(10)
 
 async def Get_professor(materia):
     Users = await Ler_Users()
