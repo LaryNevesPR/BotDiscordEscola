@@ -3,6 +3,7 @@ import json
 import os
 import random
 import asyncio
+from discord import member
 
 from discord.errors import NoMoreItems
 from JasonManager import Guardar_Users, Ler_Empregos
@@ -53,7 +54,7 @@ lojaalunos = [{"nome":"Refrigerante Cola-Coca", "preço": 6, "descrição": "Suq
 #-------------------------------------------------------------------------------------
 #--------------------------------PERFIL-----------------------------------------------
 #-------------------------------------------------------------------------------------
-@client.command()
+@client.command(pass_context=True)
 async def CriarConta(ctx, arg):
     Users = await Ler_Users()
     if str(ctx.author.id) in Users:
@@ -64,6 +65,8 @@ async def CriarConta(ctx, arg):
     arg = arg.lower()
     if arg == "aluno":
         await Criar_Conta_Aluno(ctx.author)
+        cargo = discord.utils.get(ctx.author.guild.roles, name="Aluno")
+        await ctx.author.add_roles(cargo)
         await ctx.send("Você foi cadastrado com sucesso como Aluno")
     elif arg == "professor":
         #await Criar_Conta_Professor(ctx.author)
@@ -472,7 +475,7 @@ async def on_command_error(ctx, error):
 async def Aula_Portugues():
     message_channel = client.get_channel(898414589417521192)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de portguês está començando")
+    await message_channel.send("A aula de portguês está començando\n<!@900878776152506389> sente em seu lugar! ")
     prof = await Get_professor("Professor de Português")
     aulaAtual["nome"] = "Português"
     aulaAtual["professor"] = prof
@@ -504,7 +507,7 @@ async def before_Aula_Portugues():
 async def Aula_Matematica():
     message_channel = client.get_channel(556910930911297537)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de matemática está començando")
+    await message_channel.send("A aula de matemática está començando\n<!@900878776152506389> sente em seu lugar! ")
     prof = await Get_professor("Professor de Matemática")
     aulaAtual["nome"] = "Matemática"
     aulaAtual["professor"] = prof
@@ -537,7 +540,7 @@ async def before_Aula_Matematica():
 async def Aula_Historia():
     message_channel = client.get_channel(556910930911297537)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de história está començando")
+    await message_channel.send("A aula de história está començando\n<!@900878776152506389> sente em seu lugar! ")
     prof = await Get_professor("Professor de História")
     aulaAtual["nome"] = "História"
     aulaAtual["professor"] = prof
@@ -570,7 +573,7 @@ async def before_Aula_Historia():
 async def Aula_Biologia():
     message_channel = client.get_channel(556910930911297537)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de biologia está començando")
+    await message_channel.send("A aula de biologia está començando\n<!@900878776152506389> sente em seu lugar! ")
     prof = await Get_professor("Professor de Biologia")
     aulaAtual["nome"] = "Biologia"
     aulaAtual["professor"] = prof
@@ -602,7 +605,7 @@ async def before_Aula_Biologia():
 async def Aula_Fisica():
     message_channel = client.get_channel(556910930911297537)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de física está començando")
+    await message_channel.send("A aula de física está començando\n<!@900878776152506389> sente em seu lugar! ")
     prof = await Get_professor("Professor de Física")
     aulaAtual["nome"] = "Física"
     aulaAtual["professor"] = prof
@@ -634,7 +637,7 @@ async def before_Aula_Fisica():
 async def Aula_Quimica():
     message_channel = client.get_channel(556910930911297537)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de química está començando")
+    await message_channel.send("A aula de química está començando\n<!@900878776152506389> sente em seu lugar! ")
     prof = await Get_professor("Professor de Química")
     aulaAtual["nome"] = "Química"
     aulaAtual["professor"] = prof
@@ -666,7 +669,7 @@ async def before_Aula_Quimica():
 async def Aula_Geografia():
     message_channel = client.get_channel(556910930911297537)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de geografia está començando")
+    await message_channel.send("A aula de geografia está començando\n<!@900878776152506389> sente em seu lugar! ")
     prof = await Get_professor("Professor de Geografia")
     aulaAtual["nome"] = "Geografia"
     aulaAtual["professor"] = prof

@@ -53,7 +53,7 @@ lojaalunos = [{"nome":"Refrigerante Cola-Coca", "preço": 6, "descrição": "Suq
 #-------------------------------------------------------------------------------------
 #--------------------------------PERFIL-----------------------------------------------
 #-------------------------------------------------------------------------------------
-@client.command()
+@client.command(pass_context=True)
 async def CriarConta(ctx, arg):
     Users = await Ler_Users()
     if str(ctx.author.id) in Users:
@@ -64,6 +64,8 @@ async def CriarConta(ctx, arg):
     arg = arg.lower()
     if arg == "aluno":
         await Criar_Conta_Aluno(ctx.author)
+        cargo = discord.utils.get(ctx.author.guild.roles, name="Aluno")
+        await ctx.author.add_roles(cargo)
         await ctx.send("Você foi cadastrado com sucesso como Aluno")
     elif arg == "professor":
         #await Criar_Conta_Professor(ctx.author)
