@@ -59,6 +59,8 @@ async def CriarConta(ctx, arg):
     Users = await Ler_Users()
     if str(ctx.author.id) in Users:
         ocup = Users[str(ctx.author.id)]["ocupação"]
+        cargo = discord.utils.get(ctx.author.guild.roles, name="Aluno")
+        await ctx.author.add_roles(cargo)
         await ctx.send(f"Você já é cadastrado nessa escola como {ocup}")
         return
     
