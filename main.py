@@ -477,7 +477,7 @@ async def on_command_error(ctx, error):
 async def Aula_Portugues():
     message_channel = client.get_channel(898308678187364352)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de portguês está començando\n<@!900878776152506389> sente em seu lugar! ")
+    await message_channel.send("A aula de portguês está començando\n<@!900860933457461288> sente em seu lugar! ")
     prof = await Get_professor("Professor de Português")
     aulaAtual["nome"] = "Português"
     aulaAtual["professor"] = prof
@@ -509,7 +509,7 @@ async def before_Aula_Portugues():
 async def Aula_Matematica():
     message_channel = client.get_channel(898308678187364352)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de matemática está començando\n<@!900878776152506389> sente em seu lugar! ")
+    await message_channel.send("A aula de matemática está començando\n<@!900860933457461288> sente em seu lugar! ")
     prof = await Get_professor("Professor de Matemática")
     aulaAtual["nome"] = "Matemática"
     aulaAtual["professor"] = prof
@@ -542,7 +542,7 @@ async def before_Aula_Matematica():
 async def Aula_Historia():
     message_channel = client.get_channel(898308678187364352)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de história está començando\n<@!900878776152506389> sente em seu lugar! ")
+    await message_channel.send("A aula de história está començando\n<@!900860933457461288> sente em seu lugar! ")
     prof = await Get_professor("Professor de História")
     aulaAtual["nome"] = "História"
     aulaAtual["professor"] = prof
@@ -575,7 +575,7 @@ async def before_Aula_Historia():
 async def Aula_Biologia():
     message_channel = client.get_channel(898308678187364352)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de biologia está començando\n<@!900878776152506389> sente em seu lugar! ")
+    await message_channel.send("A aula de biologia está començando\n<@!900860933457461288> sente em seu lugar! ")
     prof = await Get_professor("Professor de Biologia")
     aulaAtual["nome"] = "Biologia"
     aulaAtual["professor"] = prof
@@ -607,7 +607,7 @@ async def before_Aula_Biologia():
 async def Aula_Fisica():
     message_channel = client.get_channel(898308678187364352)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de física está començando\n<@!900878776152506389> sente em seu lugar! ")
+    await message_channel.send("A aula de física está començando\n<@!900860933457461288> sente em seu lugar! ")
     prof = await Get_professor("Professor de Física")
     aulaAtual["nome"] = "Física"
     aulaAtual["professor"] = prof
@@ -639,7 +639,7 @@ async def before_Aula_Fisica():
 async def Aula_Quimica():
     message_channel = client.get_channel(898308678187364352)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de química está començando\n<@!900878776152506389> sente em seu lugar! ")
+    await message_channel.send("A aula de química está començando\n<@!900860933457461288> sente em seu lugar! ")
     prof = await Get_professor("Professor de Química")
     aulaAtual["nome"] = "Química"
     aulaAtual["professor"] = prof
@@ -671,7 +671,7 @@ async def before_Aula_Quimica():
 async def Aula_Geografia():
     message_channel = client.get_channel(898308678187364352)
     await message_channel.purge(limit=1000000)
-    await message_channel.send("A aula de geografia está començando\n<@!900878776152506389> sente em seu lugar! ")
+    await message_channel.send("A aula de geografia está començando\n<@!900860933457461288> sente em seu lugar! ")
     prof = await Get_professor("Professor de Geografia")
     aulaAtual["nome"] = "Geografia"
     aulaAtual["professor"] = prof
