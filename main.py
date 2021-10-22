@@ -202,9 +202,10 @@ async def Emprego(ctx, emprego):
     if str(ctx.author.id) in Users:
         if Users[str(ctx.author.id)]["estaempregado"] == False:
             if emp in Empregos:
-                print("AAA")
                 Users[str(ctx.author.id)]["estaempregado"] = True
-                Users[str(ctx.author.id)]["emprego"] = Empregos[emprego]
+                Users[str(ctx.author.id)]["emprego"]["nomeemprego"] = Empregos[emp]["nomeemprego"]
+                Users[str(ctx.author.id)]["emprego"]["dinheiromin"] = Empregos[emp]["dinheiromin"]
+                Users[str(ctx.author.id)]["emprego"]["dinheiromax"] = Empregos[emp]["dinheiromax"]
                 Guardar_Users(Users)
                 await ctx.send(f"Você agora está trabalhando como {emprego}")
             else:

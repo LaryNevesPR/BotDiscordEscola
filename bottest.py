@@ -13,7 +13,7 @@ import datetime as dt
 
 os.chdir("D:\Py\Git\BotDiscordEscola")
 
-client = commands.Bot(command_prefix="!!",  case_insensitive=True)
+client = commands.Bot(command_prefix="!",  case_insensitive=True)
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
@@ -199,9 +199,14 @@ async def Emprego(ctx, emprego):
     if str(ctx.author.id) in Users:
         if Users[str(ctx.author.id)]["estaempregado"] == False:
             if emp in Empregos:
-                print("AAA")
+                print("AAAEmprego ok")
                 Users[str(ctx.author.id)]["estaempregado"] = True
-                Users[str(ctx.author.id)]["emprego"] = Empregos[emprego]
+                print("AAAEmprego Emprego true")
+                print(Empregos[emp]["nomeemprego"])
+                Users[str(ctx.author.id)]["emprego"]["nomeemprego"] = Empregos[emp]["nomeemprego"]
+                Users[str(ctx.author.id)]["emprego"]["dinheiromin"] = Empregos[emp]["dinheiromin"]
+                Users[str(ctx.author.id)]["emprego"]["dinheiromax"] = Empregos[emp]["dinheiromax"]
+                print("Emprego emprego")
                 Guardar_Users(Users)
                 await ctx.send(f"Você agora está trabalhando como {emprego}")
             else:
