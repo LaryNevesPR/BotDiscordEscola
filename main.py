@@ -84,6 +84,7 @@ async def Perfil(ctx):
 
     contacriada = await ContaCriada(ctx.author)
     if contacriada != False:
+        await ctx.send("Você não tem conta, Digite !!Criarconta Aluno")
         return
     
 
