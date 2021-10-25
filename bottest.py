@@ -21,13 +21,13 @@ for filename in os.listdir('./cogs'):
 
 @client.event
 async def on_ready():
-    
+    """
     Aula_Portugues.start()
     Aula_Matematica.start()
     Aula_Historia.start()
     Aula_Fisica.start()
     Aula_Quimica.start()
-    Aula_Geografia.start()
+    Aula_Geografia.start()"""
     print('Opa! To On!')
 #-------------------------------------------------------------------------------------
 #--------------------------------Aulas------------------------------------------------
@@ -471,7 +471,7 @@ async def on_command_error(ctx, error):
 #-------------------------------------------------------------------------------------
 #--------------------------------Aulas-----------------------------------------------
 #-------------------------------------------------------------------------------------
-
+"""
 #-------------------------------------------------------------------------------------
 #--------------------------------Portugues-----------------------------------------------
 #-------------------------------------------------------------------------------------
@@ -698,7 +698,7 @@ async def before_Aula_Geografia():
 
         # wait some time before another loop. Don't make it more than 60 sec or it will skip
         await asyncio.sleep(10)
-
+"""
 async def Get_professor(materia):
     Users = await Ler_Users()
     id_ = None

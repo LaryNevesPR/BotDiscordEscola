@@ -70,13 +70,13 @@
     "id": 463000964199219221,
     "nome": "Og_jr",
     "ocupação": "Aluno",
-    "dinheiro": 286,
+    "dinheiro": 319,
     "reputação": 50,
-    "estaempregado": false,
+    "estaempregado": true,
     "emprego": {
-      "nomeemprego": "Sem emprego",
-      "dinheiromin": "0",
-      "dinheiromax": "0"
+      "nomeemprego": "Limpeza do campus",
+      "dinheiromin": "19",
+      "dinheiromax": "21"
     },
     "notas": {
       "português": 0,
@@ -88,13 +88,18 @@
       "geografia": 0,
       "edfisica": 0
     },
-    "inventario": {}
+    "inventario": [
+      {
+        "item": "sanduiche",
+        "quantidade": 1
+      }
+    ]
   },
   "860169366635806741": {
     "id": 860169366635806741,
     "nome": "Rag_chan",
     "ocupação": "Aluno",
-    "dinheiro": 359,
+    "dinheiro": 391,
     "reputação": 50,
     "estaempregado": true,
     "emprego": {
@@ -127,7 +132,7 @@
     "id": 619230710846455808,
     "nome": "Capivara Mistica",
     "ocupação": "Aluno",
-    "dinheiro": 282,
+    "dinheiro": 295,
     "reputação": 50,
     "estaempregado": true,
     "emprego": {
